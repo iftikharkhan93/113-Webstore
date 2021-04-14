@@ -1,0 +1,813 @@
+/* Note there a few "reset" styles given in reset.css. Review those before you begin */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    --text-col: #000000;
+    --bg-color: #fff;
+    --hover: #ff5050;
+    /* color: #111; */
+   
+    
+
+    
+  } 
+ 
+
+  /* product images  */
+  img {
+	max-width: 100%;
+	height: auto;
+    vertical-align: bottom;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+/* img:hover{
+    opacity: 0.5;
+    image-orientation: flip;
+} */
+
+
+
+
+
+
+/* The container for radio buttons */
+.container-radio {
+    display: inline;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  
+  /* Hide the browser's default radio button */
+  .container-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container-radio input:checked ~ .checkmark {
+    background-color: #ff5050;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container-radio input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container-radio .checkmark:after {
+      top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+
+  
+  .products h1{
+    text-align: center;
+    color: #111;
+  }
+
+ 
+  
+/*  Filters  */
+.filters{
+    font-size: 15px;
+    text-align: center; 
+    margin: 20px;
+    
+}
+.filters fieldset{
+    text-align: center;
+    width: 50%;
+    position:relative;
+    font-size: 15px;
+    padding: 2px;
+    display: inline-block;
+    justify-content: center;
+  
+}
+
+
+
+/*  Results section */
+
+.results{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, 25rem);
+    justify-content:center;
+}
+.results button{
+    display:inline-table;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    background: white;
+    color: #000000;
+    font-family: sans-serif;
+    font-size: 2rem;
+    cursor: pointer;;
+    text-align: center;
+    border-radius: 10%;
+}
+
+.results button:hover{
+    background: red;
+}
+
+/*  Products */
+.product{   
+    height: auto;
+    width: auto;
+    overflow:hidden;
+    background-color:white;
+    text-align: center;
+    position: relative;
+    margin: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 0.5em rgba(110, 110, 110, 0.5);   
+    /* flex-wrap: wrap;  */
+}
+
+.product_info li{
+    
+    display: inline;
+   
+}
+.product_info{
+    font-size: 12px;
+    justify-content: center;
+}
+
+.product_footer{
+    margin:0 0;
+    background-color:#f2f2f2;
+}
+.product_footer button{
+    height: 28px;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+
+
+/* page number */
+.pagination{
+    background: #f2f2f2;
+    text-align: center;
+    display: inline;
+  }
+
+
+.pagination li{
+    display: inline;
+    
+}
+.pagination p{
+  text-decoration: underline;
+  padding-bottom: 10px;
+  letter-spacing: 0.1em;
+}
+
+.pagination a {
+  color: black;
+  float: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border-radius: 50%;
+} 
+
+.pagination a:hover{
+  background-color: #ff5050;
+
+}
+
+
+.container {
+    display: inline;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(75, 75, 75);
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #ff5050;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+       top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+
+
+/* The container for radio buttons for products */
+.container-radio-prod {
+    display: inline;
+    position: relative;
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-top: 2px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  
+  /* Hide the browser's default radio button for products */
+  .container-radio-prod input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button for products */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(75, 75, 75);
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container-radio-prod input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a red background */
+  .container-radio-prod input:checked ~ .checkmark {
+    background-color: #ff5050;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container-radio-prod input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container-radio-prod .checkmark:after {
+       top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+
+
+  /* Nav bar */
+
+  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  background: #f2f2f2;
+}
+nav{
+  background: #171c24;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 100px;
+  position: relative;
+}
+nav .logo{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+
+
+nav .logo:hover{
+    color: rgb(255, 83, 83);
+   
+  }
+nav .nav-items{
+  display: flex;
+  flex: 1;
+  padding: 0 0 0 40px;
+}
+nav .nav-items li{
+  list-style: none;
+  padding: 0 15px;
+}
+nav .nav-items li a{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+nav .nav-items li a:hover{
+  color: rgb(255, 83, 83);
+  
+}
+
+
+nav form{
+  display: flex;
+  height: 40px;
+  padding: 2px;
+  background: #1e232b;
+  min-width: 18%!important;
+  border-radius: 2px;
+  border: 1px solid rgba(175, 140, 140, 0.2);
+}
+nav form .search-data{
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 17px;
+  border: none;
+  font-weight: 500;
+  background: none;
+}
+nav form button{
+  padding: 0 15px;
+  color: #fff;
+  font-size: 17px;
+  background: #ff3d00;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+nav form button:hover{
+  background: #e63600;
+}
+nav .menu-icon,
+nav .cancel-icon,
+nav .search-icon{
+  width: 40px;
+  text-align: center;
+  margin: 0 50px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+nav .menu-icon span,
+nav .cancel-icon,
+nav .search-icon{
+  display: none;
+}
+
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.content header{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .text{
+  font-size: 30px;
+  font-weight: 700;
+}
+.space{
+  margin: 10px 0;
+}
+nav .logo.space{
+  color: red;
+  padding: 0 5px 0 0;
+}
+
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.content header{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .text{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .space{
+  margin: 10px 0;
+}
+
+/* footer */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+.footer {
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 45px 50px;
+}
+
+.footer .footer-left p {
+  color: #8f9296;
+  font-size: 14px;
+  margin: 0;
+}
+/* Footer links */
+
+.footer p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s;
+}
+
+.footer p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+}
+
+.footer .footer-links a:before {
+  content: "·";
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer .footer-links .link-1:before {
+  content: none;
+}
+
+.footer .footer-right {
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition:all .25s;
+}
+
+.footer .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);
+color:var(--hover)}
+
+.footer p.footer-links a:hover{text-decoration:underline;
+color:var(--hover);}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  .footer .footer-left, .footer .footer-right {
+    text-align: center;
+  }
+  .footer .footer-right {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  .footer .footer-left p.footer-links {
+    line-height: 1.8;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* reset the page */
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+html {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+}
+
+
+
+/* Preview each of these suggested resets before beginning your project styling */
+
+
+
+ul, ol, dl {
+	list-style: none;
+	margin: 0 px;
+	padding: 0;
+} 
+
+li > ul, li > ol {
+	padding-left: 2.5em;
+} 
+
+input, button {
+	margin: 0;
+	font: inherit;
+} 
+
+fieldset {
+	display: flex;
+	margin: 10;
+	padding: 0;
+	
+} 
+
+legend {
+	padding: 0;
+	border: none;
+	font-size: 15px;
+} 
+
+
+/* These will make "User agent stylesheet" values (Chrome) available when needed, using classes */
+ul.ul {
+	list-style-type: disc;
+}
+ol.ol {
+	list-style-type: decimal;
+}
+ul.ul, ol.ol {
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 2.5em;
+}
+fieldset.fieldset {
+	display: block;
+	margin-inline-start: 0.125em;
+	margin-inline-end: 0.125em;
+	padding-block-start: 0.35em;
+	padding-inline-start: 0.75em;
+	padding-inline-end: 0.75em;
+	padding-block-end: 0.625em;
+	min-inline-size: min-content;
+	border-width: 0.125em;
+	border-style: groove;
+	border-color: initial;
+	border-image: initial;
+}
+legend.legend {
+	display: block;
+	padding-inline-start: 0.125em;
+	padding-inline-end: 0.125em;
+	border-width: initial;
+	border-style: none;
+	border-color: initial;
+	border-image: initial;
+}
+
+
+
+/* media queries */
+@media (max-width: 1245px) {
+  nav{
+    padding: 0 50px;
+  }
+}
+@media (max-width: 1140px){
+  nav{
+    padding: 0px;
+  }
+  nav .logo{
+    flex: 2;
+    text-align: center;
+  }
+  nav .nav-items{
+    position: fixed;
+    z-index: 99;
+    top: 70px;
+    width: 100%;
+    left: -100%;
+    height: 100%;
+    padding: 10px 50px 0 50px;
+    text-align: center;
+    background: #14181f;
+    display: inline-block;
+    transition: left 0.3s ease;
+  }
+  nav .nav-items.active{
+    left: 0px;
+  }
+  nav .nav-items li{
+    line-height: 40px;
+    margin: 30px 0;
+  }
+  nav .nav-items li a{
+    font-size: 20px;
+  }
+  nav form{
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    opacity: 0;
+    pointer-events: none;
+    transition: top 0.3s ease, opacity 0.1s ease;
+  }
+  nav form.active{
+    top: 95px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  nav form:before{
+    position: absolute;
+    content: "";
+    top: -13px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    border: 10px solid transparent;
+    border-bottom-color: #0062ff;
+    margin: -20px 0 0;
+  }
+  nav form:after{
+    position: absolute;
+    content: '';
+    height: 60px;
+    padding: 2px;
+    background: #1e232b;
+    border-radius: 2px;
+    min-width: calc(100% + 20px);
+    z-index: -2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  nav .menu-icon{
+    display: block;
+  }
+  nav .search-icon,
+  nav .menu-icon span{
+    display: block;
+  }
+  nav .menu-icon span.hide,
+  nav .search-icon.hide{
+    display: none;
+  }
+  nav .cancel-icon.show{
+    display: block;
+  }
+}
+
+
+@media (max-width: 980px){
+  nav .menu-icon,
+  nav .cancel-icon,
+  nav .search-icon{
+    margin: 0 20px;
+  }
+  nav form{
+    right: 30px;
+  }
+}
+@media (max-width: 350px){
+  nav .menu-icon,
+  nav .cancel-icon,
+  nav .search-icon{
+    margin: 0 10px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  footer{
+    position: relative;
+    bottom: 0px;
+  }
+  .main-content{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main-content .box{
+    margin: 5px 0;
+  }
+}
