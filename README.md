@@ -1,8 +1,17 @@
+#Light House
+
+![Light House](https://user-images.githubusercontent.com/12351953/115706804-090acc80-a33c-11eb-84e3-57063a3a8d83.PNG)
+
+
+
 # E-Comm Webstore Review Project
 
 ## Outline
 
 Read and complete the steps in the following documents:
+
+
+
 
 [Project walk through](https://www.notion.so/juneate/Project-Webstore-2d90ddb08fa44746966b255f800628997)
 
