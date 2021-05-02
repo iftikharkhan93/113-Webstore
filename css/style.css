@@ -153,11 +153,12 @@ img {
   } */
 /* Results section */
 
-.results {
-  /* display: grid;
+/* .results {
+   display: grid;
   grid-template-columns: repeat(auto-fit, 25rem);
-  justify-content: center; */
+  justify-content: center; 
 }
+*/
 
 .productID {
   display: flex;
