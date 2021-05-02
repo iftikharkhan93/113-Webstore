@@ -405,6 +405,11 @@ nav .logo {
   font-weight: 600;
   letter-spacing: -1px;
 }
+.logo-link {
+  text-decoration: none;
+  color: #fff;
+
+}
 
 nav .logo:hover {
   color: rgb(255, 83, 83);
@@ -523,6 +528,10 @@ nav .logo.space {
   font-size: 16px;
 }
 /* footer */
+.product-footer {
+  position: absolute;
+  bottom: 0;
+}
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
 
