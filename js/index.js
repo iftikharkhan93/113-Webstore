@@ -1,11 +1,18 @@
 var myProducts = [
   {
     title: "Men's Hoodie",
+    category: "Men's Full-Zip Woven Hoodie",
     price: 50.0,
     newPrice: 39.0,
     desc: "Tie-Dye Pullover Hoodie",
     thumnail: "img/Prod-1.jpg",
     rating: 5,
+    relatedImages: [
+      "img/Prod-1.jpg",
+      "img/Prod-2.jpg",
+      "img/Prod-3.jpg",
+      "img/Prod-4.jpg",
+    ],
     colors: [
       {
         color: "Red",
@@ -34,11 +41,20 @@ var myProducts = [
   },
   {
     title: "White Shoe",
+    category: "Men's Full-Zip Woven Hoodie",
+
     price: 50.0,
     newPrice: 40.0,
     desc: "Nike Air Force 1 '07",
     thumnail: "img/Prod-2.jpg",
     rating: 5,
+    relatedImages: [
+      "img/Prod-1.jpg",
+      "img/Prod-2.jpg",
+      "img/Prod-3.jpg",
+      "img/Prod-4.jpg",
+    ],
+
     colors: [
       {
         color: "Red",
@@ -70,11 +86,20 @@ var myProducts = [
   },
   {
     title: "Women's Bag",
+    category: "Men's Full-Zip Woven Hoodie",
+
     price: 50.0,
     newPrice: 35.0,
     desc: "Here is a shot of this product ...",
     thumnail: "img/Prod-5.jpg",
     rating: 5,
+    relatedImages: [
+      "img/Prod-1.jpg",
+      "img/Prod-2.jpg",
+      "img/Prod-3.jpg",
+      "img/Prod-4.jpg",
+    ],
+
     colors: [
       {
         color: "Red",
@@ -100,11 +125,20 @@ var myProducts = [
   },
   {
     title: "Men's Shoe",
+    category: "Men's Full-Zip Woven Hoodie",
+
     price: 50.0,
     newPrice: 36.0,
     desc: "Nike Blazer Mid '77 Vintage",
     thumnail: "img/Prod-3.jpg",
     rating: 4,
+    relatedImages: [
+      "img/Prod-1.jpg",
+      "img/Prod-2.jpg",
+      "img/Prod-3.jpg",
+      "img/Prod-4.jpg",
+    ],
+
     colors: [
       {
         color: "Red",
@@ -136,11 +170,20 @@ var myProducts = [
   },
   {
     title: "Women's Sportswear",
+    category: "Men's Full-Zip Woven Hoodie",
+
     price: 50.0,
     newPrice: 29.0,
     desc: "Here is a shot of this product..",
     thumnail: "img/Prod-4.jpg",
     rating: 3,
+    relatedImages: [
+      "img/Prod-1.jpg",
+      "img/Prod-2.jpg",
+      "img/Prod-3.jpg",
+      "img/Prod-4.jpg",
+    ],
+
     colors: [
       {
         color: "Red",
@@ -164,17 +207,24 @@ var myProducts = [
         size: "L",
       },
       {
-        size: "XXL",
+        size: "XL",
       },
     ],
   },
   {
     title: "Backpack",
+    category: "Men's Full-Zip Woven Hoodie",
     price: 50.0,
     newPrice: 25.0,
     desc: "Here is a shot of this product..",
     thumnail: "img/Prod-6.jpg",
     rating: 5,
+    relatedImages: [
+      "img/Prod-1.jpg",
+      "img/Prod-2.jpg",
+      "img/Prod-3.jpg",
+      "img/Prod-4.jpg",
+    ],
     colors: [
       {
         color: "Red",
@@ -758,7 +808,6 @@ for (var i = 0; i < myProducts.length; i++) {
   article.setAttribute("class", "product");
 
   let header = document.createElement("header");
-  // article.appendChild(header)
 
   let headerImg = document.createElement("img");
   headerImg.setAttribute("src", myProducts[i].thumnail);
@@ -820,16 +869,16 @@ for (var i = 0; i < myProducts.length; i++) {
   dl.appendChild(dd);
   header.appendChild(dl);
   let anchor2 = document.createElement("button");
-  anchor2.setAttribute("class", "detail-btn");
+  anchor2.setAttribute("id", "detail-btn");
   anchor2.innerHTML = "Details";
-  console.log(myProducts[i]);
-  var v = myProducts[i];
+  const v = myProducts[i];
   anchor2.addEventListener("click", function () {
     console.log(v);
     window.location.href = "./product.html";
     var detailBtnId = v;
     localStorage.setItem("cardDetail", JSON.stringify(detailBtnId));
   });
+
   header.appendChild(anchor2);
   article.appendChild(header);
 
